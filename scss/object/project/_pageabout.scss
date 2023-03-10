@@ -1,0 +1,15 @@
+//変数の読み込み
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
+
+.p-pageabout {
+    margin: 30px 20px 30px 20px;
+
+    @include m.tablet {
+        margin: 30px 40px 30px 40px;
+    }
+
+    @include m.pc {
+        margin: 30px 100px 30px 100px;
+    }
+}

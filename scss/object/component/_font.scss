@@ -1,0 +1,19 @@
+//変数の読み込み
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
+
+.c-fontfamily {
+    &--R {
+        font-family: 'Roboto', 'sans-serif';
+        font-weight: 700;
+    }
+
+    &--M-regular {
+        font-family: "M PLUS 1p", "sans-serif";
+        font-weight: 400;
+    }
+    &--M-bold {
+        font-family: "M PLUS 1p", "sans-serif";
+        font-weight: 700;
+    }
+}

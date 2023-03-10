@@ -1,0 +1,54 @@
+//変数の読み込み
+@use "../foundation/_variables" as v;
+@use "../foundation/_mixin" as m;
+
+.l-sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    padding-left: 30px;
+    padding-top: 178px;
+    transition: all .5s ease;
+    background-color: v.$color-sidebar;
+    z-index: 4;
+
+    &.active {
+        right: 0;
+        overflow: scroll;
+        height: 100vh;
+    }
+
+    h2 {
+        font-size: 34px;
+        display: none;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    li {
+        font-size: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    @include m.tablet {
+        width: 40%;
+    }
+
+    @include m.pc {
+        position: relative;
+        right: 0%;
+        width: 21vw;
+        padding-top: 86px;
+
+        h2 {
+            display: block;
+        }
+    }
+}

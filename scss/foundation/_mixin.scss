@@ -1,0 +1,17 @@
+//ブレイクポイント
+$tablet: 600px;
+$pc    : 1025px;
+
+//tablet
+@mixin tablet {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+//PC
+@mixin pc {
+    @media screen and (min-width: $pc) {
+       @content; 
+    }
+}

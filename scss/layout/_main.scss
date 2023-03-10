@@ -1,0 +1,17 @@
+//変数の読み込み
+@use "../foundation/_variables" as v;
+@use "../foundation/_mixin" as m;
+
+.l-main{
+    width: 100vw;
+    display: flex;
+    position: relative;
+    @include m.pc{
+        article{
+            width: 81vw;
+        }
+        aside{
+            width: 19vw;
+        }
+    }
+}

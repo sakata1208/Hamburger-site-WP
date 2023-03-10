@@ -1,0 +1,92 @@
+//変数の読み込み
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
+
+.p-brunchmenu {
+    margin: 40px 20px 40px 20px;
+
+    &__box1,
+    &__box2 {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: calc((100vw - 40px)*1.91);
+    }
+
+    &__box1 {
+        background-image: url(../images/takeout.jpg);
+    }
+
+    &__box2 {
+        background-image: url(../images/eatin.jpg);
+    }
+
+    &__box-title {
+        margin: 13px 0 0 15px;
+        font-size: 41px;
+        color: #EAEAEA;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 120%;
+            left: 0;
+            width: 30px;
+            height: 4px;
+            background-color: #fff;
+        }
+    }
+
+    &__box-text {
+        position: absolute;
+        bottom: 16px;
+
+        &-content {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 16px;
+            margin: 16px 16px 0 16px;
+
+            dt {
+                font-size: 22px;
+            }
+
+            dd {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @include m.tablet {
+        margin: 40px;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &__box1,
+        &__box2 {
+            width: calc(100vw - 120px);
+            height: calc((100vw - 120px)*0.95);
+        }
+
+        &__box1 {
+            margin-right: 40px;
+        }
+    }
+
+    @include m.pc {
+        margin-top: 120px 5.8vw 120px 5.8vw;
+
+        &__box1,
+        &__box2 {
+            width: calc(69.4vw - 80px);
+            height: calc((69.4vw - 80px)*0.95);
+        }
+
+        &__box1 {
+            margin-right: 80px;
+        }
+    }
+}

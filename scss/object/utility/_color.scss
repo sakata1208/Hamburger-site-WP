@@ -1,0 +1,17 @@
+//変数の読み込み
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
+
+.u-fontcolor {
+    &--white {
+        color: v.$color-white;
+    }
+
+    &--brown {
+        color: v.$color-brown;
+    }
+
+    &--darkbrown {
+        color: v.$color-darkbrown;
+    }
+}

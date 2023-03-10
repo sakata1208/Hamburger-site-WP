@@ -1,0 +1,10 @@
+//変数の読み込み
+@use "../foundation/variables" as v;
+@use "../foundation/mixin" as m;
+
+.l-footer{
+    width: 100%;
+    height: 150px;
+    background-color:v.$color-footer ;
+    text-align: center;
+}
